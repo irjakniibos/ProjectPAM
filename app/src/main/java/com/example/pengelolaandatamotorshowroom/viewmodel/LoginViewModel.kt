@@ -37,18 +37,23 @@ class LoginViewModel(private val repositoryAuth: RepositoryAuth) : ViewModel() {
             try {
                 val response = repositoryAuth.login(uiState.email, uiState.password)
                 if (response.success) {
-                    uiState = uiState.copy(isLoading = false)
+                    uiState = uiState.copy(isLoading = false, showSuccessToast = true)
                     onSuccess()
                 } else {
                     uiState = uiState.copy(
                         isLoading = false,
-                        errorMessage = response.message
+                        errorMessage = "Email atau password salah"
                     )
                 }
             } catch (e: Exception) {
+                val errorMsg = if (e.message?.contains("401") == true || e.message?.contains("Unauthorized") == true) {
+                    "Email atau password salah"
+                } else {
+                    "Terjadi kesalahan"
+                }
                 uiState = uiState.copy(
                     isLoading = false,
-                    errorMessage = e.message ?: "Terjadi kesalahan"
+                    errorMessage = errorMsg
                 )
             }
         }
@@ -61,5 +66,6 @@ data class LoginUiState(
     val emailError: String? = null,
     val passwordError: String? = null,
     val isLoading: Boolean = false,
-    val errorMessage: String? = null
+    val errorMessage: String? = null,
+    val showSuccessToast: Boolean = false
 )
