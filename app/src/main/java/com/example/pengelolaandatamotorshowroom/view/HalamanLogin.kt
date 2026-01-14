@@ -1,5 +1,6 @@
 package com.example.pengelolaandatamotorshowroom.view
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -14,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -36,6 +38,15 @@ fun HalamanLogin(
 ) {
     val uiState = viewModel.uiState
     var passwordVisible by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    val loginSuccessMessage = stringResource(R.string.login_success)
+
+    // Tampilkan toast ketika login berhasil
+    LaunchedEffect(uiState.showSuccessToast) {
+        if (uiState.showSuccessToast) {
+            Toast.makeText(context, loginSuccessMessage, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -209,7 +220,7 @@ fun HalamanLogin(
                         // Login Button
                         Button(
                             onClick = { viewModel.login(onLoginSuccess) },
-                            enabled = !uiState.isLoading,
+                            enabled = !uiState.isLoading && uiState.email.isNotBlank() && uiState.password.isNotBlank(),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = Primary,
                                 contentColor = OnPrimary
