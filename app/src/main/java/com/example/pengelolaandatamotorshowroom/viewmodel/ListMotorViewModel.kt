@@ -46,6 +46,7 @@ class ListMotorViewModel(private val repositoryMotor: RepositoryMotor) : ViewMod
         viewModelScope.launch {
             try {
                 repositoryMotor.deleteMotor(motor.id)
+                uiState = uiState.copy(successMessage = "Motor berhasil dihapus")
                 hideDeleteDialog()
                 loadMotors(uiState.brandId, uiState.brandName)
             } catch (e: Exception) {
@@ -73,8 +74,10 @@ class ListMotorViewModel(private val repositoryMotor: RepositoryMotor) : ViewMod
             try {
                 if (uiState.isAddStok) {
                     repositoryMotor.tambahStok(motor.id)
+                    uiState = uiState.copy(successMessage = "Stok berhasil ditambah")
                 } else {
                     repositoryMotor.kurangiStok(motor.id)
+                    uiState = uiState.copy(successMessage = "Stok berhasil dikurangi")
                 }
                 hideStokDialog()
                 loadMotors(uiState.brandId, uiState.brandName)
@@ -84,6 +87,10 @@ class ListMotorViewModel(private val repositoryMotor: RepositoryMotor) : ViewMod
             }
         }
     }
+
+    fun clearSuccessMessage() {
+        uiState = uiState.copy(successMessage = null)
+    }
 }
 
 data class ListMotorUiState(
@@ -92,6 +99,7 @@ data class ListMotorUiState(
     val motors: List<DataMotor> = emptyList(),
     val isLoading: Boolean = false,
     val errorMessage: String? = null,
+    val successMessage: String? = null,
     val showDeleteDialog: Boolean = false,
     val motorToDelete: DataMotor? = null,
     val showStokDialog: Boolean = false,
