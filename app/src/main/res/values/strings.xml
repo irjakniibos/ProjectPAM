@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Showroom Motor</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Login Admin</string>
+    <string name="login_showroom">Showroom</string>
+    <string name="login_motor">Motor</string>
+    <string name="login_description">Silakan masukkan email dan password Anda</string>
+    <string name="email">Email</string>
+    <string name="email_hint">Masukkan email</string>
+    <string name="email_placeholder">admin@showroom.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Masukkan password</string>
+    <string name="password_placeholder">••••••••</string>
+    <string name="btn_login">Login</string>
+    <string name="login_loading">Memproses login...</string>
+    <string name="login_success">Login berhasil</string>
+    <string name="login_error">Email atau password salah</string>
+    <string name="email_required">Email tidak boleh kosong</string>
+    <string name="password_required">Password tidak boleh kosong</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="brand_list">Daftar Brand Motor</string>
+    <string name="brand_empty">Belum ada brand motor</string>
+    <string name="brand_click_hint">Klik untuk melihat motor</string>
+    <string name="btn_add_brand">Tambah Brand</string>
+    <string name="btn_logout">Logout</string>
+    <string name="logout_confirm">Yakin ingin logout?</string>
+
+    <!-- Brand Management -->
+    <string name="brand_name">Nama Brand</string>
+    <string name="brand_name_hint">Contoh: Honda</string>
+    <string name="brand_add_title">Tambah Brand</string>
+    <string name="brand_edit_title">Edit Brand</string>
+    <string name="brand_delete_confirm">Yakin hapus brand ini? Semua motor dengan brand ini akan ikut terhapus</string>
+    <string name="brand_success_add">Brand berhasil ditambahkan</string>
+    <string name="brand_success_edit">Brand berhasil diperbarui</string>
+    <string name="brand_success_delete">Brand berhasil dihapus</string>
+    <string name="brand_error_duplicate">Brand sudah ada!</string>
+    <string name="brand_error_empty">Nama brand tidak boleh kosong</string>
+
+    <!-- List Motor Screen -->
+    <string name="list_motor_title">Daftar Motor</string>
+    <string name="motor_empty">Belum ada motor untuk brand ini</string>
+    <string name="motor_empty_hint">Belum ada motor untuk brand ini.\nTambah motor baru dengan tombol +</string>
+    <string name="btn_add_motor">Tambah Motor</string>
+    <string name="stok_label">Stok:</string>
+
+    <!-- Motor Detail Screen -->
+    <string name="detail_motor_title">Detail Motor</string>
+    <string name="motor_name">Nama Motor</string>
+    <string name="motor_brand">Brand</string>
+    <string name="motor_type">Tipe</string>
+    <string name="motor_year">Tahun</string>
+    <string name="motor_price">Harga</string>
+    <string name="motor_color">Warna</string>
+    <string name="motor_stock">Stok</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_back">Kembali</string>
+    <string name="btn_edit_motor">Edit Motor</string>
+    <string name="delete_motor_title">Hapus Motor</string>
+    <string name="stok_awal">Stok Awal</string>
+
+    <!-- Form Motor Screen -->
+    <string name="form_motor_add_title">Tambah Motor</string>
+    <string name="form_motor_edit_title">Edit Motor</string>
+    <string name="motor_name_hint">Contoh: PCX 160</string>
+    <string name="motor_type_hint">Pilih tipe motor</string>
+    <string name="motor_year_hint">Contoh: 2024</string>
+    <string name="motor_price_hint">Contoh: 28000000</string>
+    <string name="motor_color_hint">Contoh: Hitam</string>
+    <string name="motor_stock_hint">Contoh: 5</string>
+    <string name="btn_save">Simpan</string>
+    <string name="btn_cancel">Batal</string>
+
+    <!-- Motor Types -->
+    <string name="type_matic">Matic</string>
+    <string name="type_sport">Sport</string>
+    <string name="type_bebek">Bebek</string>
+    <string name="type_trail">Trail</string>
+
+    <!-- Motor CRUD Messages -->
+    <string name="motor_success_add">Motor berhasil ditambahkan</string>
+    <string name="motor_success_edit">Motor berhasil diperbarui</string>
+    <string name="motor_success_delete">Motor berhasil dihapus</string>
+    <string name="motor_delete_confirm">Yakin hapus motor ini?</string>
+    <string name="motor_error_duplicate">Motor sudah ada!</string>
+    <string name="motor_error_empty_fields">Semua field wajib diisi</string>
+    <string name="motor_error_year_invalid">Tahun minimal 2000</string>
+    <string name="motor_error_price_invalid">Harga harus lebih dari 0</string>
+    <string name="motor_error_stock_invalid">Stok tidak boleh negatif</string>
+
+    <!-- Stock Management -->
+    <string name="stock_add_title">Tambah Stok</string>
+    <string name="stock_reduce_title">Kurangi Stok</string>
+    <string name="stock_add_confirm">Yakin ingin menambah stok?</string>
+    <string name="stock_reduce_confirm">Yakin ingin mengurangi stok?</string>
+    <string name="stock_success_add">Stok berhasil ditambah</string>
+    <string name="stock_success_reduce">Stok berhasil dikurangi</string>
+    <string name="stock_error_zero">Stok sudah 0, tidak bisa dikurangi</string>
+    <string name="btn_add_stock">+</string>
+    <string name="btn_reduce_stock">-</string>
+
+    <!-- Common Buttons -->
+    <string name="btn_detail">Detail</string>
+    <string name="btn_delete">Hapus</string>
+    <string name="btn_yes">Ya</string>
+    <string name="btn_no">Tidak</string>
+
+    <!-- Common Messages -->
+    <string name="loading">Memuat data...</string>
+    <string name="error_network">Tidak dapat terhubung ke server</string>
+    <string name="error_unknown">Terjadi kesalahan</string>
+    <string name="error_unauthorized">Sesi berakhir, silakan login kembali</string>
+    <string name="retry">Coba Lagi</string>
+
+    <!-- Currency Format -->
+    <string name="currency_format">Rp %s</string>
+
+    <!-- Content Description (for accessibility) -->
+    <string name="cd_brand_card">Card brand motor</string>
+    <string name="cd_motor_card">Card data motor</string>
+    <string name="cd_add_button">Tombol tambah</string>
+    <string name="cd_edit_button">Tombol edit</string>
+    <string name="cd_delete_button">Tombol hapus</string>
+    <string name="cd_detail_button">Tombol detail</string>
+    <string name="cd_back_button">Tombol kembali</string>
+    <string name="cd_logout_button">Tombol logout</string>
+    <string name="cd_add_stock_button">Tombol tambah stok</string>
+    <string name="cd_reduce_stock_button">Tombol kurangi stok</string>
+</resources>
