@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.TwoWheeler
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.*
@@ -71,23 +70,13 @@ fun HalamanLogin(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                // Icon Motor - Dalam kotak coklat
-                Box(
-                    modifier = Modifier
-                        .size(dimensionResource(R.dimen.login_icon_box_size))
-                        .background(
-                            color = Primary,
-                            shape = RoundedCornerShape(dimensionResource(R.dimen.corner_radius_large))
-                        ),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.TwoWheeler,
-                        contentDescription = "Motor Icon",
-                        tint = OnPrimary,
-                        modifier = Modifier.size(dimensionResource(R.dimen.login_motor_icon_size))
-                    )
-                }
+                // Logo Showroom Motor
+                Image(
+                    painter = painterResource(id = R.drawable.logoshowroommotor),
+                    contentDescription = "Logo Showroom Motor",
+                    modifier = Modifier.size(dimensionResource(R.dimen.login_icon_box_size)),
+                    contentScale = ContentScale.Fit
+                )
 
                 Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacing_large)))
 

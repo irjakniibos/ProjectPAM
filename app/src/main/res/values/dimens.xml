@@ -93,7 +93,7 @@
     <dimen name="brand_icon_size">48dp</dimen>
 
     <!-- Login Screen -->
-    <dimen name="login_icon_box_size">100dp</dimen>
+    <dimen name="login_icon_box_size">150dp</dimen>
     <dimen name="login_motor_icon_size">60dp</dimen>
     <dimen name="corner_radius_large">20dp</dimen>
     <dimen name="text_size_display">36sp</dimen>
